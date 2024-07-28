@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    backface-visibility: visible;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: whitesmoke;
+}
+
+.container {
+    max-width: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.desc {
+    display: flex;
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    height: auto;
+    width: auto;
+    max-width: 20%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    border: 1px solid black;
+    width: 50%;
+    display: block;
+    margin: auto;
+    background-color:#007D75 ;
+}
+
+.menuTable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+.menu-item {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    flex: 0 0 48%;
+    box-sizing: border-box;
+}
+
+.menu:nth-child(odd) {
+    display: flex;
+    flex-direction: column;
+    animation: slideInRight 1s forwards;
+}
+
+.menu:nth-child(even) {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+    animation: slideInLeft 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.menu {
+    opacity: 1;
+    background-color: white;
+    max-width: 100%;
+    width: 100%;
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.menu h2 {
+    margin: 0 0 10px 0;
+    font-size: 34px;
+    color: #007D75;
+    text-transform: capitalize;
+}
+
+.menu p {
+    margin-left: 5%;
+    margin-top: 0px;
+    font-size: 18px;
+    color: black;
+    
+}
+
+#price{
+    color: #B38B00;
+}
+
+.qp{
+    display: flex;
+    gap: 10px;
+}
+
+#disc{
+    width: 100%;
+    text-align: justify;
+}
+
+@media (max-width: 767px) {
+    .container{
+        width: 90%;
+    }
+
+    .menu-item {
+        flex: 0 0 100%;
+    }
+
+    .menu h2 {
+        font-size: 20px;
+    }
+
+    .menu p {
+        font-size: 12px;
+    }
+}
+
+hr {
+    color: white;
+}
